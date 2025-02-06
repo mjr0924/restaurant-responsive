@@ -1,1 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", serif;
+  --color-first-color: #069c54;
+  --color-first-color-alt: #048654;
+  --color-title-color: #393939;
+  --color-text-color: #707070;
+  --color-text-color-light: #a6a6a6;
+  --color-body-color: #fbfefd;
+  --color-container-color: #ffffff;
+  --height-header-height: 3rem;
+  --text-biggest-font-size: 2.25rem;
+  --text-h1-font-size: 1.5rem;
+  --text-h2-font-size: 1.25rem;
+  --text-h3-font-size: 1rem;
+  --text-normal-font-size: 0.938rem;
+  --text-small-font-size: 0.813rem;
+  --text-smaller-font-size: 0.75rem;
+}
+
+@layer {
+  body {
+    font-family: var(--font-poppins);
+  }
+}
+@layer components{
+  .section{
+    padding: 4rem 0 2rem;
+  }
+  .section-title,.section-subtitle{
+    text-align: center;
+  }
+  .section-title{
+    @apply text-h1-font-size;
+    @apply text-title-color;
+    @apply mb-6;
+  }
+  .section-subtitle{
+    @apply block;
+    @apply text-first-color;
+    @apply font-medium;
+    @apply mb-2;
+  }
+  .nav__item{
+    @apply mb-4;
+  }
+  .nav__link,.nav__logo,.nav__toggle{
+    @apply text-text-color;
+    @apply font-medium;
+  }
+  .nav__link{
+    @apply duration-300;
+  }
+  .nav__link:hover{
+    @apply text-first-color;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --text-biggest-font-size: 4rem;
+    --text-h1-font-size: 2.25rem;
+    --text-h2-font-size: 1.5rem;
+    --text-h3-font-size: 1.25rem;
+    --text-normal-font-size: 1rem;
+    --text-small-font-size: 0.875rem;
+    --text-smaller-font-size: 0.813rem;
+  }
+}

@@ -10,11 +10,30 @@
     <link href="./css/output.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="mt-12 text-normal-font-size bg-body-color text-text-color leading-[1.6] ">
     
-    <h1 class="text-3xl font-bold text-cyan-400 " >Hello world!</h1>
+    <!-- header -->
+     <header class="l-header w-full fixed top-0 left-0 z-[100] bg-body-color" id="header">
+        <nav class="nav bd-container max-w-[960px] w-[100%-2rem] h-header-height flex justify-between items-center mx-4 " id="nav">
+          <a href="#" class="nav__logo hover:text-first-color">Tasty</a>
+          
+          
+          <div class="nav__menu max-md:fixed max-md:top-12 max-md:left-0 max-md:w-full max-md:pt-6 max-md:pb-4 max-md:px-0 max-md:text-center max-md:bg-body-color max-md:duration-400 shadow-[0_4px_4px_rgba(0,0,0,.1)] rounded-[0_0_1rem_1rem] z-[100]" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+              <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+              <li class="nav__item"><a href="#contact  " class="nav__link">Contact us</a></li>
+            </ul>
+          </div>
 
-
+          <div class="nav__toggle text-2xl cursor-pointer" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+          </div>
+        
+        </nav>
+     </header>
 
 
 
@@ -22,6 +41,9 @@
 
 
     
+
+
+
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
