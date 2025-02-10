@@ -586,6 +586,9 @@
   .bg-body-color {
     background-color: var(--color-body-color);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -684,10 +687,10 @@
     justify-content: center;
     align-items: center;
     padding: 0.3rem;
-    background: rgba(6,156,84,.5);
-    border-radius: .4rem;
+    background: rgba(6, 156, 84, 0.5);
+    border-radius: 0.4rem;
     z-index: 10;
-    transition: .4s;
+    transition: 0.4s;
     visibility: hidden;
   }
   .scrolltop:hover {
@@ -701,12 +704,53 @@
     visibility: visible;
     bottom: 1.5rem;
   }
+  .home__container {
+    height: calc(100vh - var(--height-header-height));
+    align-content: center;
+  }
+  .home__title {
+    font-size: var(--text-biggest-font-size);
+    color: var(--color-first-color);
+    margin-bottom: 1rem;
+  }
+  .home__subtitle {
+    display: block;
+    font-size: var(--text-h1-font-size);
+    color: var(--color-title-color);
+    margin-bottom: 1.5rem;
+  }
+  .home__img {
+    width: 300px;
+    justify-self: center;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background: var(--color-first-color);
+    color: var(--color-container-color);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+  }
+  .button:hover {
+    background: var(--color-first-color-alt);
+  }
+  .about__data {
+    text-align: center;
+  }
+  .about__description {
+    margin-bottom: 1.5rem;
+  }
+  .about__img {
+    width: 280px;
+    justify-self: center;
+    border-radius: 0.5rem;
+  }
 }
 @layer components {
   .section {
     padding: 4rem 0 2rem;
   }
-  .section-title,.section-subtitle {
+  .section-title, .section-subtitle {
     text-align: center;
   }
   .section-title {
@@ -721,10 +765,20 @@
     font-weight: var(--font-weight-medium);
     margin-bottom: calc(var(--spacing) * 2);
   }
+  .bd-container {
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .bd-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
   .nav__item {
     margin-bottom: calc(var(--spacing) * 4);
   }
-  .nav__link,.nav__logo,.nav__toggle {
+  .nav__link, .nav__logo, .nav__toggle {
     color: var(--color-text-color);
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
