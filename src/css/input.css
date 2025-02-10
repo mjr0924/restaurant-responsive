@@ -24,7 +24,46 @@
   body {
     font-family: var(--font-poppins);
   }
+  .show-menu{
+    @apply top-12
+  }
+  /* Active menu */
+  .active-link{
+    @apply text-first-color;
+  }
+  /* change background header */
+  .scroll-header{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /* scroll top */
+  .scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    background: rgba(6,156,84,.5);
+    border-radius: .4rem;
+    z-index: 10;
+    transition: .4s;
+    visibility: hidden;
+  }
+  .scrolltop:hover{
+    background: var(--color-first-color-alt);
+  }
+  .scrolltop__icon{
+    font-size: 1.8rem;
+    color: var(--color-body-color);
+  }
+  /* show scrolltop */
+  .scroll-top{
+    visibility: visible;
+    bottom: 1.5rem;
+  }
 }
+
 @layer components{
   .section{
     padding: 4rem 0 2rem;
@@ -56,7 +95,10 @@
   .nav__link:hover{
     @apply text-first-color;
   }
+
 }
+
+
 @media screen and (min-width: 768px) {
   :root {
     --text-biggest-font-size: 4rem;
