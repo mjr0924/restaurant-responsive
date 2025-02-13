@@ -106,7 +106,6 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-
 // Scroll Reveal Animation
 const sr = ScrollReveal({
   origin: "top",
@@ -115,6 +114,7 @@ const sr = ScrollReveal({
   reset: true,
 });
 
-sr.reveal(`.home__data, .home__img, .about__data, .about__img, .services__content, .menu__content, .app__data, .app__img, .contact__data, .contact__button, .footer__content`, {  interval: 200 });
-
-
+sr.reveal(
+  `.home__data, .home__img, .about__data, .about__img, .services__content, .menu__content, .app__data, .app__img, .contact__data, .contact__button, .footer__content`,
+  { interval: 200 }
+);
