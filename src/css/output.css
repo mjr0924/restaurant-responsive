@@ -667,6 +667,20 @@
   }
 }
 @layer {
+  body.dark-theme {
+    --color-title-color: #f1f3f2;
+    --color-text-color: #c7d1cc;
+    --color-body-color: #1d2521;
+    --color-container-color: #27302c;
+  }
+  .change-theme {
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: var(--color-text-color);
+    font-size: 1rem;
+    cursor: pointer;
+  }
   body {
     font-family: var(--font-poppins);
   }
@@ -968,6 +982,10 @@
   }
   .nav__toggle {
     display: none;
+  }
+  .change-theme {
+    position: initial;
+    margin-left: 1rem;
   }
   .home__container {
     height: 100vh;
