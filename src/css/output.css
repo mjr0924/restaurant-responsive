@@ -603,10 +603,6 @@
   .text-text-color {
     color: var(--color-text-color);
   }
-  .shadow-\[0_4px_4px_rgba\(0\,0\,0\,\.1\)\] {
-    --tw-shadow: 0 4px 4px var(--tw-shadow-color, rgba(0,0,0,.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .hover\:text-first-color {
     &:hover {
       @media (hover: hover) {
@@ -657,6 +653,12 @@
   .max-md\:text-center {
     @media (width < 48rem) {
       text-align: center;
+    }
+  }
+  .max-md\:shadow-\[0_4px_4px_rgba\(0\,0\,0\,\.1\)\] {
+    @media (width < 48rem) {
+      --tw-shadow: 0 4px 4px var(--tw-shadow-color, rgba(0,0,0,.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .max-md\:duration-400 {
