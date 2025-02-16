@@ -120,49 +120,27 @@
     background: var(--color-first-color-alt);
   }
   /* About */
-  .about__data {
-    text-align: center;
-  }
-  .about__description {
-    margin-bottom: 1.5rem;
-  }
-  .about__img {
-    width: 280px;
-    justify-self: center;
-    border-radius: 0.5rem;
-  }
 
   /* Services */
-
-  .services__container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    row-gap: 2.5rem;
-  }
   .services__content {
-    text-align: center;
+    @apply text-center;
   }
   .services__img {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1rem;
-    fill: var(--color-first-color);
+    @apply mb-4 w-16 h-16 fill-first-color;
   }
   .services__content > svg {
-    display: inline-block;
+    @apply inline-block
   }
   .services__title {
-    font-size: var(--text-h3-font-size);
-    color: var(--color-title-color);
-    margin-bottom: 0.5rem;
+    @apply mb-2 text-title-color text-h3-font-size;
   }
   .services__description {
-    padding: 0 1.5rem;
+    @apply py-0 px-6;
   }
 
   /* MENU */
   .menu__container {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    @apply justify-center grid-cols-2 md:grid-cols-[repeat(3,210px)] md:gap-x-16 md:mt-12;
   }
   .menu__content {
     position: relative;
@@ -389,14 +367,7 @@
     height: 100vh;
     justify-items: center;
   }
-  .services__container,
-  .menu__container {
-    margin-top: 3rem;
-  }
-  .menu__container {
-    grid-template-columns: repeat(3, 210px);
-    column-gap: 4rem;
-  }
+  
   .menu__content {
     padding: 1.5rem;
   }
