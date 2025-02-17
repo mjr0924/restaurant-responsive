@@ -143,70 +143,52 @@
     @apply justify-center grid-cols-2 md:grid-cols-[repeat(3,210px)] md:gap-x-16 md:mt-12;
   }
   .menu__content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-container-color);
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
-    padding: 0.75rem;
+    @apply relative flex flex-col bg-container-color rounded-[0.5rem] shadow-md p-3;
   }
   .menu__img {
-    width: 100%;
-    align-self: center;
-    margin-bottom: 1rem;
+    @apply w-full self-center mb-2;
   }
   .menu__name,
   .menu__preci {
-    font-weight: 600;
-    color: var(--color-title-color);
+    @apply text-title-color font-semibold;
   }
   .menu__name {
-    font-size: var(--text-normal-font-size);
+    @apply text-normal-font-size
   }
   .menu__detail,
   .menu__preci {
-    font-size: var(--text-small-font-size);
+    @apply text-small-font-size
   }
   .menu__detail {
-    margin-bottom: 0.5rem;
+    @apply mb-2
   }
   .menu__button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    padding: 0.625rem 0.813rem;
-    border-radius: 0.5rem 0 0.5rem 0;
+    @apply absolute bottom-0 right-0 flex py-[0.625rem] px-[0.813rem] rounded-tl-[0.5rem] rounded-tr-none rounded-bl-[0.5rem] rounded-br-none;
   }
 
   /* APP */
   .app__data {
-    text-align: center;
+    @apply text-center
   }
   .app__description {
-    margin-bottom: 1.5rem;
+    @apply mb-6;
   }
   .app__stores {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
+    @apply mb-8 flex justify-center;
   }
   .app__store {
-    width: 120px;
-    margin: 0 1rem;
+    @apply w-30 mx-4 my-0;
   }
   .app__img {
-    width: 230px;
-    justify-self: center;
+    @apply w-58 justify-self-center;
   }
 
   /* Contact */
   .contact__container {
-    text-align: center;
+    @apply text-center;
   }
   .contact__description {
-    margin-bottom: 1.5rem;
+    @apply mb-6;
   }
 
   /* Footer */
