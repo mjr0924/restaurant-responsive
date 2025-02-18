@@ -33,9 +33,6 @@
   .change-theme {
     @apply absolute right-4 top-[1.8rem] text-text-color text-base cursor-pointer;
   }
-  body {
-    @apply font-poppins;
-  }
   h1,
   h2,
   h3,
@@ -53,7 +50,7 @@
   }
   /* change background header */
   .scroll-header {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    @apply shadow-[0_2px_4px_rgba(0,0,0,.1)];
   }
   /* scroll top */
   .scrolltop {
@@ -70,35 +67,15 @@
     @apply visible bottom-6;
   }
 
-  /* Home */
-  .home__container {
-    @apply h-[calc(100vh-var(--height-header-height))] content-center;
-  }
-  .home__title {
-    @apply mb-4 text-biggest-font-size text-first-color;
-  }
-  .home__subtitle {
-    @apply block text-h1-font-size text-title-color mb-6;
-  }
-  .home__img {
-    @apply w-[300px] justify-self-center;
-  }
-  .button {
-    @apply inline-block py-3 px-4 bg-first-color text-white rounded-[0.5rem] duration-300;
-  }
-  .button:hover {
-    @apply bg-first-color-alt;
-  }
-
   /* Services */
   .services__content {
     @apply text-center;
   }
-  .services__img {
-    @apply mb-4 w-16 h-16 fill-first-color;
-  }
   .services__content > svg {
     @apply inline-block;
+  }
+  .services__img {
+    @apply mb-4 w-16 h-16 fill-first-color;
   }
   .services__title {
     @apply mb-2 text-title-color text-h3-font-size;
@@ -108,14 +85,11 @@
   }
 
   /* MENU */
-  .menu__container {
-    @apply justify-center grid-cols-2 md:grid-cols-[repeat(3,210px)] md:gap-x-16 md:mt-12;
-  }
   .menu__content {
-    @apply relative flex flex-col bg-container-color rounded-[0.5rem] shadow-md p-3;
+    @apply relative flex flex-col bg-container-color rounded-[0.5rem] shadow-md p-3 md:p-6;
   }
   .menu__img {
-    @apply w-full self-center mb-2;
+    @apply w-full self-center mb-2 md:w-[130PX];
   }
   .menu__name,
   .menu__preci {
@@ -136,18 +110,6 @@
   }
 
   /* APP */
-  .app__data {
-    @apply text-center;
-  }
-  .app__description {
-    @apply mb-6;
-  }
-  .app__stores {
-    @apply mb-8 flex justify-center;
-  }
-  .app__store {
-    @apply w-30 mx-4 my-0;
-  }
   .app__img {
     @apply w-58 justify-self-center;
   }
@@ -156,20 +118,8 @@
   .contact__container {
     @apply text-center;
   }
-  .contact__description {
-    @apply mb-6;
-  }
 
   /* Footer */
-  .footer__container {
-    @apply grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-y-8;
-  }
-  .footer__logo {
-    @apply text-h3-font-size text-first-color font-semibold;
-  }
-  .footer__description {
-    @apply block text-small-font-size mt-1 mx-0 mb-6;
-  }
   .footer__social {
     @apply text-2xl text-title-color mr-4;
   }
@@ -181,9 +131,6 @@
   }
   .footer__link:hover {
     @apply text-first-color;
-  }
-  .footer__copy {
-    @apply text-small-font-size text-text-color-light text-center mt-14;
   }
 }
 
@@ -199,10 +146,7 @@
     @apply text-h1-font-size text-title-color mb-6;
   }
   .section-subtitle {
-    @apply block;
-    @apply text-first-color;
-    @apply font-medium;
-    @apply mb-2;
+    @apply block text-first-color font-medium mb-2;
   }
 
   /* layout */
@@ -214,7 +158,7 @@
   }
 
   .nav__item {
-    @apply mb-4;
+    @apply mb-4 md:ml-10 md:mb-0;
   }
   .nav__link,
   .nav__logo,
@@ -227,10 +171,15 @@
   .nav__link:hover {
     @apply text-first-color;
   }
+  .button {
+    @apply inline-block py-3 px-4 bg-first-color text-white rounded-[0.5rem] duration-300;
+  }
+  .button:hover {
+    @apply bg-first-color-alt;
+  }
 }
 
 @media screen and (min-width: 576px) {
-  .home__container,
   .about__container,
   .app__container {
     @apply grid-cols-2 items-center;
@@ -248,9 +197,7 @@
     @apply w-[380px] order-[-1];
   }
   .contact__container {
-    @apply grid-cols-[1.75fr_1fr];
-    grid-template-columns: 1.75fr 1fr;
-    align-items: center;
+    @apply grid-cols-[1.75fr_1fr] items-center;
   }
   .contact__button {
     @apply justify-self-center;
@@ -279,38 +226,19 @@
   .nav__list {
     @apply flex;
   }
-  .nav__item {
-    @apply ml-10 mb-0;
-  }
   .nav__toggle {
     @apply hidden;
   }
   .change-theme {
     @apply ml-4 static;
   }
-  .home__container {
-    @apply h-screen justify-items-center;
-  }
-
-  .menu__content {
-    @apply p-6;
-  }
-  .menu__img {
-    @apply w-[130PX];
-  }
-  .app__store {
-    @apply m-0 mr-2;
-  }
 }
 @media screen and (min-width: 960px) {
-  .bd-container {
-    @apply mx-auto;
-  }
-  .home__img {
-    @apply w-[500px];
-  }
   .about__container,
   .app__container {
     @apply gap-x-28;
+  }
+  .bd-container{
+    @apply mx-auto;
   }
 }
