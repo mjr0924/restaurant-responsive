@@ -33,6 +33,7 @@
   .change-theme {
     @apply absolute right-4 top-[1.8rem] text-text-color text-base cursor-pointer;
   }
+
   h1,
   h2,
   h3,
@@ -41,27 +42,34 @@
   h6 {
     @apply font-bold;
   }
+
   .show-menu {
     @apply top-12;
   }
+
   /* Active menu */
   .active-link {
     @apply text-first-color;
   }
+
   /* change background header */
   .scroll-header {
-    @apply shadow-[0_2px_4px_rgba(0,0,0,.1)];
+    @apply shadow-[0_2px_4px_rgba(0, 0, 0, .1)];
   }
+
   /* scroll top */
   .scrolltop {
-    @apply fixed right-4 bottom-[-20%] flex justify-center items-center p-[0.3rem] bg-[rgba(6,156,84,0.5)] rounded-[0.4rem] z-10 duration-400 invisible;
+    @apply fixed right-4 bottom-[-20%] flex justify-center items-center p-[0.3rem] bg-[rgba(6, 156, 84, 0.5)] rounded-[0.4rem] z-10 duration-400 invisible;
   }
+
   .scrolltop:hover {
     @apply bg-first-color-alt;
   }
+
   .scrolltop__icon {
     @apply text-[1.8rem] text-body-color;
   }
+
   /* show scrolltop */
   .scroll-top {
     @apply visible bottom-6;
@@ -71,15 +79,19 @@
   .services__content {
     @apply text-center;
   }
+
   .services__content > svg {
     @apply inline-block;
   }
+
   .services__img {
     @apply mb-4 w-16 h-16 fill-first-color;
   }
+
   .services__title {
     @apply mb-2 text-title-color text-h3-font-size;
   }
+
   .services__description {
     @apply py-0 px-6;
   }
@@ -88,23 +100,29 @@
   .menu__content {
     @apply relative flex flex-col bg-container-color rounded-[0.5rem] shadow-md p-3 md:p-6;
   }
+
   .menu__img {
     @apply w-full self-center mb-2 md:w-[130PX];
   }
+
   .menu__name,
   .menu__preci {
     @apply text-title-color font-semibold;
   }
+
   .menu__name {
     @apply text-normal-font-size;
   }
+
   .menu__detail,
   .menu__preci {
     @apply text-small-font-size;
   }
+
   .menu__detail {
     @apply mb-2;
   }
+
   .menu__button {
     @apply absolute bottom-0 right-0 flex py-[0.625rem] px-[0.813rem] rounded-tl-[0.5rem] rounded-tr-none rounded-bl-[0.5rem] rounded-br-none;
   }
@@ -123,12 +141,15 @@
   .footer__social {
     @apply text-2xl text-title-color mr-4;
   }
+
   .footer__title {
     @apply text-h2-font-size text-title-color mb-4;
   }
+
   .footer__link {
     @apply text-text-color inline-block mb-2;
   }
+
   .footer__link:hover {
     @apply text-first-color;
   }
@@ -138,13 +159,16 @@
   .section {
     @apply px-0 pt-16 pb-8;
   }
+
   .section-title,
   .section-subtitle {
     @apply text-center;
   }
+
   .section-title {
     @apply text-h1-font-size text-title-color mb-6;
   }
+
   .section-subtitle {
     @apply block text-first-color font-medium mb-2;
   }
@@ -153,6 +177,7 @@
   .bd-container {
     @apply max-w-[960px] mx-4 w-[calc(100%-2rem)];
   }
+
   .bd-grid {
     @apply grid gap-6;
   }
@@ -160,20 +185,25 @@
   .nav__item {
     @apply mb-4 md:ml-10 md:mb-0;
   }
+
   .nav__link,
   .nav__logo,
   .nav__toggle {
     @apply text-text-color font-medium;
   }
+
   .nav__link {
     @apply duration-300;
   }
+
   .nav__link:hover {
     @apply text-first-color;
   }
+
   .button {
     @apply inline-block py-3 px-4 bg-first-color text-white rounded-[0.5rem] duration-300;
   }
+
   .button:hover {
     @apply bg-first-color-alt;
   }
@@ -184,6 +214,7 @@
   .app__container {
     @apply grid-cols-2 items-center;
   }
+
   .about__data,
   .about__initial,
   .app__data,
@@ -192,13 +223,16 @@
   .contact__initial {
     text-align: initial;
   }
+
   .about__img,
   .app__img {
     @apply w-[380px] order-[-1];
   }
+
   .contact__container {
     @apply grid-cols-[1.75fr_1fr] items-center;
   }
+
   .contact__button {
     @apply justify-self-center;
   }
@@ -214,31 +248,39 @@
     --text-small-font-size: 0.875rem;
     --text-smaller-font-size: 0.813rem;
   }
+
   body {
     @apply m-0;
   }
+
   .section {
     @apply pt-32;
   }
+
   .nav {
     @apply h-[calc(var(--height-header-height)+1.5rem)];
   }
+
   .nav__list {
     @apply flex;
   }
+
   .nav__toggle {
     @apply hidden;
   }
+
   .change-theme {
     @apply ml-4 static;
   }
 }
+
 @media screen and (min-width: 960px) {
   .about__container,
   .app__container {
     @apply gap-x-28;
   }
-  .bd-container{
+
+  .bd-container {
     @apply mx-auto;
   }
 }
